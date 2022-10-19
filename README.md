@@ -1,3 +1,4 @@
-Writing printf functions in C
-team project by 
+Writing printf functions in C!
+
+Team project by; 
 Omotoyosi Rufai & Alvin Agamah
