@@ -35,7 +35,8 @@ int print_string(va_list types, char buffer[],
 {
 	int length = 0, i;
 	char *str = va_arg(types, char *);
-UNUSED(buffer);
+
+	UNUSED(buffer);
 	UNUSED(flags);
 	UNUSED(width);
 	UNUSED(precision);
@@ -46,7 +47,8 @@ UNUSED(buffer);
 		if (precision >= 6)
 			str = "      ";
 	}
-while (str[length] != '\0')
+
+	while (str[length] != '\0')
 		length++;
 
 	if (precision >= 0 && precision < length)
@@ -69,7 +71,8 @@ while (str[length] != '\0')
 			return (width);
 		}
 	}
-return (write(1, str, length));
+
+	return (write(1, str, length));
 }
 /************************* PRINT PERCENT SIGN *************************/
 /**
@@ -93,6 +96,7 @@ int print_percent(va_list types, char buffer[],
 	UNUSED(size);
 	return (write(1, "%%", 1));
 }
+
 /************************* PRINT INT *************************/
 /**
  * print_int - Print int
@@ -116,7 +120,6 @@ int print_int(va_list types, char buffer[],
 
 	if (n == 0)
 		buffer[i--] = '0';
-	
 
 	buffer[BUFF_SIZE - 1] = '\0';
 	num = (unsigned long int)n;
@@ -126,7 +129,8 @@ int print_int(va_list types, char buffer[],
 		num = (unsigned long int)((-1) * n);
 		is_negative = 1;
 	}
-while (num > 0)
+
+	while (num > 0)
 	{
 		buffer[i--] = (num % 10) + '0';
 		num /= 10;
@@ -154,7 +158,8 @@ int print_binary(va_list types, char buffer[],
 	unsigned int n, m, i, sum;
 	unsigned int a[32];
 	int count;
-UNUSED(buffer);
+
+	UNUSED(buffer);
 	UNUSED(flags);
 	UNUSED(width);
 	UNUSED(precision);
