@@ -1,3 +1,3 @@
 Writing printf functions in C
-by 
+team project by 
 Omotoyosi Rufai & Alvin Agamah
